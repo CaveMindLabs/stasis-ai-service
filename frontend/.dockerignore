@@ -1,0 +1,20 @@
+# frontend/.dockerignore
+
+# Git files
+.git
+.gitignore
+
+# Local dependencies - these will be installed inside the container
+node_modules
+
+# Next.js build artifacts - these are generated inside the container
+.next
+
+# Local environment variables
+.env.local
+
+# PNPM debug logs
+pnpm-debug.log
+
+# Readme/docs not needed in the image
+README.md
