@@ -1,10 +1,3 @@
-<!-- # stasis-ai-project
-
-To be used for auto model download during packaging later.
-    Lite Model: https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_lite/float16/1/pose_landmarker_lite.task
-    Full Model: https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_full/float16/1/pose_landmarker_full.task
-    Heavy Model: https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_heavy/float16/1/pose_landmarker_heavy.task -->
-
 # Stasis AI - 3D Sports Motion Analysis (Phase 1)
 
 This repository contains the Phase 1 standalone prototype for the Stasis AI project. It is a fully client-side web application that performs real-time pose estimation and features automatic recording triggers.
@@ -28,8 +21,8 @@ The entire setup process is automated using Docker Compose.
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-public-repo-url>
-    cd stasis-ai-project
+    git clone https://github.com/CaveMindLabs/stasis-ai-service.git
+    cd stasis-ai-service
     ```
 
 2.  **Build and run the container:**
