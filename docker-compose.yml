@@ -1,11 +1,11 @@
-version: '3.8'
-
 services:
   frontend:
+    container_name: stasis_ai_frontend
     build:
       context: ./frontend
+      # Specifies the name of the Dockerfile to use (optional if it's named 'Dockerfile').
       dockerfile: Dockerfile
     ports:
+      # Access the app at http://localhost:3000.
       - "3000:3000"
-    # The name of the container
-    container_name: stasis_ai_frontend
+

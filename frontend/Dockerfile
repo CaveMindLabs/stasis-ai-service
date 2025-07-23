@@ -32,11 +32,17 @@ FROM node:20-alpine
 
 WORKDIR /app
 
+# Install pnpm in the production stage as well, so we can run the start command
+RUN npm install -g pnpm
+
 # Copy the built application from the builder stage
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package.json ./package.json
+COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
+
+# This is the key optimization. Because NODE_ENV=production is set by default
+# in the node:alpine image, this command installs ONLY production dependencies.
+RUN pnpm install
 
 # Expose the port the app runs on
 EXPOSE 3000
