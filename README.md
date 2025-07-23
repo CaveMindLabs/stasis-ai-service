@@ -2,6 +2,8 @@
 
 This repository contains the Phase 1 standalone prototype for the Stasis AI project. It is a fully client-side web application that performs real-time pose estimation and features automatic recording triggers.
 
+![Application UI](docs/assets/App_UI.png)
+
 ## Features
 
 -   **Real-time Video Feed:** Accesses the user's webcam for live video.
